@@ -1,5 +1,8 @@
+"./Src/afio.o"
+"./Src/eeprom.o"
 "./Src/gpio.o"
 "./Src/main.o"
+"./Src/spi.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
 "./Src/timer.o"

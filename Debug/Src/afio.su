@@ -1,0 +1,2 @@
+../Src/afio.c:3:6:afio_enable	4	static
+../Src/afio.c:7:6:afio_exti_config	24	static

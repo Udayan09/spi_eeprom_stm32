@@ -1,6 +1,11 @@
 #include <stdint.h>
 #include "gpio.h"
 #include "timer.h"
+#include "spi.h"
+#include "eeprom.h"
+
+
+static uint8_t txDataArray[] = {1, 2, 3, 4, 5};
 
 int main(void)
 {	
@@ -8,20 +13,22 @@ int main(void)
 	gpio_config_pin(GPIOC, 13, GPIO_MODE_OUTPUT_10MHZ, GPIO_CNF_OUTPUT_PUSH_PULL);
 
 	tim2_init(TIM2, COUNTER);
-	tim1_pwm_init();
 
-	uint8_t duty = 50;
-	uint8_t dir = 0;
+	spi_init(SPI1);
+
+	
+	
 	for(;;){
 		
-		if (dir == 0) duty += 10;
-		else duty -= 10;
+		eeprom_multi_write(txDataArray, 5, 0);
+		
+		delay_ms(10);
 
-		if (duty == 100) dir = 1;
-		else if (duty == 0) dir = 0;
-
-		tim1_pwm_set_duty(duty);
-		gpio_toggle_pin(GPIOC, 13);
-		delay_ms(100);
+		for (uint8_t i = 0;i < 5; i++){
+			eeprom_read(i);
+			delay_us(100);
+		}
+		
+		delay_ms(1000);
 	}
 }

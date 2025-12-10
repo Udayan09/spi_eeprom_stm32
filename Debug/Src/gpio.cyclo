@@ -1,2 +1,2 @@
-../Src/gpio.c:4:6:gpio_enable_port	4
-../Src/gpio.c:10:6:gpio_config_pin	2
+../Src/gpio.c:5:6:gpio_enable_port	4
+../Src/gpio.c:11:6:gpio_config_pin	2

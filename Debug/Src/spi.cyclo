@@ -1,0 +1,6 @@
+../Inc/gpio.h:32:20:gpio_set_pin	1
+../Inc/spi.h:28:20:spi1_cs_disable	1
+../Src/spi.c:14:6:spi_init	2
+../Src/spi.c:37:9:spi1_transfer	3
+../Src/spi.c:47:6:spi1_transmit	3
+../Src/spi.c:55:9:spi1_receive	1

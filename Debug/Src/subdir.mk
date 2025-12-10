@@ -5,22 +5,31 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Src/afio.c \
+../Src/eeprom.c \
 ../Src/gpio.c \
 ../Src/main.c \
+../Src/spi.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
 ../Src/timer.c 
 
 OBJS += \
+./Src/afio.o \
+./Src/eeprom.o \
 ./Src/gpio.o \
 ./Src/main.o \
+./Src/spi.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
 ./Src/timer.o 
 
 C_DEPS += \
+./Src/afio.d \
+./Src/eeprom.d \
 ./Src/gpio.d \
 ./Src/main.d \
+./Src/spi.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
 ./Src/timer.d 
@@ -33,7 +42,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/gpio.cyclo ./Src/gpio.d ./Src/gpio.o ./Src/gpio.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/timer.cyclo ./Src/timer.d ./Src/timer.o ./Src/timer.su
+	-$(RM) ./Src/afio.cyclo ./Src/afio.d ./Src/afio.o ./Src/afio.su ./Src/eeprom.cyclo ./Src/eeprom.d ./Src/eeprom.o ./Src/eeprom.su ./Src/gpio.cyclo ./Src/gpio.d ./Src/gpio.o ./Src/gpio.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/spi.cyclo ./Src/spi.d ./Src/spi.o ./Src/spi.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/timer.cyclo ./Src/timer.d ./Src/timer.o ./Src/timer.su
 
 .PHONY: clean-Src
 

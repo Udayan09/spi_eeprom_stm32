@@ -1,0 +1,8 @@
+C:/Users/RUF3KOR/Desktop/STM32f103c8t6/Drivers/gpio.h:32:20:gpio_set_pin	16	static
+C:/Users/RUF3KOR/Desktop/STM32f103c8t6/Drivers/gpio.h:36:20:gpio_reset_pin	16	static
+C:/Users/RUF3KOR/Desktop/STM32f103c8t6/Drivers/spi.h:28:20:spi1_cs_disable	8	static
+C:/Users/RUF3KOR/Desktop/STM32f103c8t6/Drivers/spi.h:32:20:spi1_cs_enable	8	static
+../Src/eeprom.c:6:6:eeprom_enable_write	8	static
+../Src/eeprom.c:12:6:eeprom_write	24	static
+../Src/eeprom.c:24:6:eeprom_multi_write	56	dynamic
+../Src/eeprom.c:42:9:eeprom_read	24	static

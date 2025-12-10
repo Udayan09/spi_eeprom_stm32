@@ -1,9 +1,6 @@
 #include "gpio.h"
 #include "rcc.h"
 
-void afio_enable(){
-    RCC->APB2ENR |= (1 << 0);
-}
 
 void gpio_enable_port(GPIO_Typedef* port){
     if      (port == GPIOA) RCC->APB2ENR |= (1 << 2);
