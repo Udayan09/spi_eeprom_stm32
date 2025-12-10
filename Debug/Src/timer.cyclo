@@ -1,0 +1,5 @@
+../Src/timer.c:6:6:tim2_init	1
+../Src/timer.c:16:6:delay_us	2
+../Src/timer.c:30:6:delay_ms	2
+../Src/timer.c:36:6:tim1_pwm_init	1
+../Src/timer.c:69:6:tim1_pwm_set_duty	2
